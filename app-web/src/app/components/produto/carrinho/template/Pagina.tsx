@@ -1,3 +1,5 @@
+import Cabecalho from "./Cabecalho"
+
 export interface PaginaProps {
     children: React.ReactNode
     className?: string
@@ -5,8 +7,11 @@ export interface PaginaProps {
 
 export default function Pagina(props: PaginaProps) {
     return (
-        <div>
-            {props.children}
+        <div className="flex flex-col">
+            <Cabecalho />
+            <main>
+                {props.children}
+            </main>
         </div>
     )
 }
